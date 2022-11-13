@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Peta Ketigaku</title>
+    <link rel="stylesheet" href="leaflet.css"/>
+    <script src="leaflet.js"></script>
+</head>
+<body>
+    <div id="mapku" style="width: 100%; height: 600px;"></div>
+
+</body>
+<script type="text/javascript">
+     var mymap = L.map('mapku').setView([-0.9137822,100.4640162],17);
+    
+     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom:18,
+        id:'mapbox/streets-v11',
+        tileSize: 512,
+        zoomOffset: -1
+    }).addTo(mymap);
+
+    
+
+
+  var info_mesjid_raya_kuranji ='<p style  ="text-align: center;"><img src="images/ig_2001090007.png" width="100px" height="100px"/></p><p>Masjid Raya Kuranji is headquartered in Jl. Raya Kuranji No.28, Kuranji, Kec. Kuranji, Kota Padang, Sumatera Barat 25175, Indonesia. Masjid Raya Kuranji operates in the field of mosque and is rated by customers as 5-stars on Google. </p>';
+  var info_mesjid_raya ='<p style  ="text-align: center;"><img src="images/ig_2001090007.png" width="100px" height="100px"/></p><p> adalah masjid terbesar di provinsi Sumatra Barat yang terletak di Jalan Chatib Sulaiman, Kecamatan Padang Utara, Kota Padang</p>';
+  var info_mesjid_AlHakim ='<p style  ="text-align: center;"><img src="images/ig_2001090007.png" width="100px" height="100px"/></p><p>Masjid Raya Kuranji is headquartered in Jl. Raya Kuranji No.28, Kuranji, Kec. Kuranji, Kota Padang, Sumatera Barat 25175, Indonesia. Masjid Raya Kuranji operates in the field of mosque and is rated by customers as 5-stars on Google. </p>';
+  var info_mesjid_NurulIman ='<p style  ="text-align: center;"><img src="images/ig_2001090007.png" width="100px" height="100px"/></p><p>Masjid Raya Kuranji is headquartered in Jl. Raya Kuranji No.28, Kuranji, Kec. Kuranji, Kota Padang, Sumatera Barat 25175, Indonesia. Masjid Raya Kuranji operates in the field of mosque and is rated by customers as 5-stars on Google. </p>';
+  var info_mesjid_RayaGanting='<p style  ="text-align: center;"><img src="images/ig_2001090007.png" width="100px" height="100px"/></p><p>Masjid Raya Kuranji is headquartered in Jl. Raya Kuranji No.28, Kuranji, Kec. Kuranji, Kota Padang, Sumatera Barat 25175, Indonesia. Masjid Raya Kuranji operates in the field of mosque and is rated by customers as 5-stars on Google. </p>';
+  var info_mesjid_Syukur='<p style  ="text-align: center;"><img src="images/ig_2001090007.png" width="100px" height="100px"/></p><p>Masjid Raya Kuranji is headquartered in Jl. Raya Kuranji No.28, Kuranji, Kec. Kuranji, Kota Padang, Sumatera Barat 25175, Indonesia. Masjid Raya Kuranji operates in the field of mosque and is rated by customers as 5-stars on Google. </p>';
+  var info_mesjid_Taqwa='<p style  ="text-align: center;"><img src="images/ig_2001090007.png" width="100px" height="100px"/></p><p>Masjid Raya Kuranji is headquartered in Jl. Raya Kuranji No.28, Kuranji, Kec. Kuranji, Kota Padang, Sumatera Barat 25175, Indonesia. Masjid Raya Kuranji operates in the field of mosque and is rated by customers as 5-stars on Google. </p>';
+  var info_mesjid_Unand='<p style  ="text-align: center;"><img src="images/ig_2001090007.png" width="100px" height="100px"/></p><p>Masjid Raya Kuranji is headquartered in Jl. Raya Kuranji No.28, Kuranji, Kec. Kuranji, Kota Padang, Sumatera Barat 25175, Indonesia. Masjid Raya Kuranji operates in the field of mosque and is rated by customers as 5-stars on Google. </p>';
+  var info_mesjid_Iqra='<p style  ="text-align: center;"><img src="images/ig_2001090007.png" width="100px" height="100px"/></p><p>Masjid Raya Kuranji is headquartered in Jl. Raya Kuranji No.28, Kuranji, Kec. Kuranji, Kota Padang, Sumatera Barat 25175, Indonesia. Masjid Raya Kuranji operates in the field of mosque and is rated by customers as 5-stars on Google. </p>';
+  var info_mesjid_Hidayah='<p style  ="text-align: center;"><img src="images/ig_2001090007.png" width="100px" height="100px"/></p><p>Masjid Raya Kuranji is headquartered in Jl. Raya Kuranji No.28, Kuranji, Kec. Kuranji, Kota Padang, Sumatera Barat 25175, Indonesia. Masjid Raya Kuranji operates in the field of mosque and is rated by customers as 5-stars on Google. </p>';
+
+  L.marker([-0.9373955595283165, 100.36037832401897]).bindTooltip("mesjid raya kuranji").bindPopup(info_mesjid_raya_kuranji).addTo(mymap); 
+  L.marker([-0.9241036505238577, 100.3625110123699]).bindTooltip("mesjid raya").bindPopup(info_mesjid_raya).addTo(mymap); 
+  L.marker([-0.923101591245005, 100.34988866433052]).bindTooltip("mesjid Al-Hakim").bindPopup(info_mesjid_AlHakim).addTo(mymap); 
+  L.marker([-0.9547491360356356, 100.36218877975205]).bindTooltip("mesjid Nurul Iman").bindPopup(info_mesjid_NurulIman).addTo(mymap); 
+  L.marker([ -0.9541523595103443, 100.36969990277298]).bindTooltip("mesjid Raya Ganting").bindPopup(info_mesjid_RayaGanting).addTo(mymap); 
+  L.marker([ -0.9800423084212915, 100.3849134681111]).bindTooltip("mesjid Syukur").bindPopup(info_mesjid_Syukur).addTo(mymap); 
+  L.marker([ -0.9517045616168236, 100.35976908160342]).bindTooltip("mesjid Taqwa").bindPopup(info_mesjid_Taqwa).addTo(mymap); 
+  L.marker([-0.9403683788933824, 100.3819868392752]).bindTooltip("mesjid Unand").bindPopup(info_mesjid_Unand).addTo(mymap); 
+  L.marker([-0.9267325701365986, 100.36871934112654]).bindTooltip("mesjid Iqra").bindPopup(info_mesjid_Iqra).addTo(mymap); 
+  L.marker([-0.9120717047623721, 100.34978505276744]).bindTooltip("mesjid Hidayah").bindPopup(info_mesjid_Hidayah).addTo(mymap); 
+
+    var circle = L.circle ([-0.9373955595283165, 100.36037832401897],{
+        color: 'red', 
+        fillColor: 'f03',
+        fillOpacity: 0.5,
+        radius: 500
+    }).addTo(mymap).bindPopup('I am a circle');
+
+    var polygon = L.polygon([
+        [-0.9373955595283165, 100.36037832401897],
+        [-0.9241036505238577, 100.3625110123699],
+        [-0.923101591245005, 100.34988866433052],
+        [-0.9547491360356356, 100.36218877975205],
+        [-0.9541523595103443, 100.36969990277298],
+        [-0.9800423084212915, 100.3849134681111],
+        [-0.9517045616168236, 100.35976908160342],
+        [-0.9403683788933824, 100.3819868392752],
+        [-0.9267325701365986, 100.36871934112654],
+        [-0.9120717047623721, 100.34978505276744]
+    ]).addTo(mymap).bindPopup('I am a polygon')
+
+    var popup = L.popup()
+        .setLatLng(e.latlng)
+        .setContent('you clicked the map at'+ e.latlng.toString())
+        .openOn(mymap);
+
+        var LeafIcon = L.Icon.extend({
+            options: {
+                iconSize: [16,16]
+            }
+        });
+
+        //Array
+
+        var KordinatMesjidPadang = [
+        [-0.9373955595283165, 100.36037832401897],
+        
+        ];
+
+        var MesjiPadang = L.polygon(KordinatMesjidPadang,{color: 'orange'}).addTo(mymap);
+
+
+        var masjidicon = new LeafIcon ({iconUrl: 'images/ig_2001090007.png'});
+        L.marker([-0.9241036505238577, 100.3625110123699],{icon:masjidicon}).bindTooltip("mesjid raya").addTo(mymap);
+
+
+  
+</script>
+</html>
