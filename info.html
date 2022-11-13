@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Peta Ketigaku</title>
+    <link rel="stylesheet" href="leaflet.css"/>
+    <script src="leaflet.js"></script>
+</head>
+<body>
+    <div id="mapku" style="width: 100%; height: 600px;"></div>
+
+</body>
+<script type="text/javascript">
+     var mymap = L.map('mapku').setView([-0.9137822,100.4640162],17);
+    
+     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom:18,
+        id:'mapbox/streets-v11',
+        tileSize: 512,
+        zoomOffset: -1
+    }).addTo(mymap);
+
+    L.marker([-0.9373955595283165, 100.36037832401897]).bindTooltip("kantor gubernur").addTo(mymap); //kantor gubernur
+    L.marker([-0.9241036505238577, 100.3625110123699]).bindTooltip("mesjid raya").addTo(mymap); //Mesjid Raya
+    L.marker([-0.923101591245005, 100.34988866433052]).bindTooltip("Rumah sakit Unand").addTo(mymap); //Rumah Sakit universitas Andalas
+
+
+  var info_pnp ='<p style  ="text-align: center;"><img src="images/pnp.png" width="100px" height="100px"/></p><p>Politeknik Negeri Padang hadir di tengah-tengah masyarakat dengan menerapkan sistem pendidikan yang konsisten pada jalur pendidikan vokasional dengan menerapkan sistem pembelajaran yang aplikatif serta secara terus menerus menyesuaikan diri dengan perkembangan dunia industri dan dunia usaha yang ada untuk menghasilkan tenaga kerja yang berkompeten sesuai dengan permintaan pasar dan mampu bersaing pada era persaingan global.</p>';
+  var info_unand ='<p style  ="text-align: center;"><img src="images/unand.png" width="100px" height="100px"/></p><p>Rumah Sakit Universitas Andalas adalah salah satu rumah sakit yang ada di Kota Padang, Sumatera Barat.[2] Rumah sakit ini berada di bawah pengelolaan Universitas Andalas yang berlokasi di komplek kampus Universitas Andalas, Limau Manis, Kecamatan Pauh, Kota Padang. </p>';
+  L.marker([-0.9373955595283165, 100.36037832401897]).bindTooltip("kantor gubernur").bindPopup(info_pnp).addTo(mymap); //Politeknik Negeri Padang
+  L.marker([-0.9241036505238577, 100.3625110123699]).bindTooltip("mesjid raya").bindPopup(info_unand).addTo(mymap); //Rumah Sakit universitas Andalas
+  L.marker([-0.923101591245005, 100.34988866433052]).bindTooltip("pantai padang").bindPopup(info_unand).addTo(mymap); //Rumah Sakit universitas Andalas
+
+    var circle = L.circle ([-0.9373955595283165, 100.36037832401897],{
+        color: 'red',
+        fillColor: 'f03',
+        fillOpacity: 0.5,
+        radius: 500
+    }).addTo(mymap).bindPopup('I am a circle');
+
+    var polygon = L.polygon([
+        [-0.9373955595283165, 100.36037832401897],
+        [-0.9241036505238577, 100.3625110123699],
+        [-0.923101591245005, 100.34988866433052]
+    ]).addTo(mymap).bindPopup('I am a polygon')
+
+    var popup = L.popup()
+        .setLatLng(e.latlng)
+        .setContent('you clicked the map at'+ e.latlng.toString())
+        .openOn(mymap);
+
+        var LeafIcon = L.Icon.extend({
+            options: {
+                iconSize: [16,16]
+            }
+        });
+
+        var masjidicon = new LeafIcon ({iconUrl: 'images/masjidicon.png'});
+        L.marker([-0.9241036505238577, 100.3625110123699],{icon:masjidicon}).bindTooltip("mesjid raya").addTo(mymap);
+
+
+  
+</script>
+</html>
